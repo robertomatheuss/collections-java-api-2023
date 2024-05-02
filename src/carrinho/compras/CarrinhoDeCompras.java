@@ -18,12 +18,9 @@ public class CarrinhoDeCompras {
     public void removerItem(String name){
         itemList.removeIf(x->x.getName().equals(name));
     }
-    public Double calcularValorTotal(){
-        Double value = 0.0;
-        for (Item x : itemList) {
-            value += (x.getPrice() * x.getAmount());
-        }
-        return value;
+
+    public Double calculateTotalValue(){
+        return itemList.stream().mapToDouble(x->(x.getPrice()*x.getAmount())).sum();
     }
     public void exibirItens(){
         itemList.forEach(System.out::println);
