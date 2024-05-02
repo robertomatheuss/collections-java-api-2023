@@ -1,4 +1,4 @@
-package shopping.cart;
+package list.shopping.cart;
 
 import java.util.LinkedList;
 import java.util.List;

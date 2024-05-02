@@ -1,4 +1,4 @@
-package ordering.numbers;
+package list.ordering.numbers;
 
 import java.util.ArrayList;
 import java.util.Comparator;

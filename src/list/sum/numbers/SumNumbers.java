@@ -1,4 +1,4 @@
-package sum.numbers;
+package list.sum.numbers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ public class SumNumbers {
         if (number.isPresent())
             return number.get();
         else
-            throw new NoSuchElementException();
+            throw new NoSuchElementException("List is empty");
     }
 
     public Integer findSmallestNumber(){
