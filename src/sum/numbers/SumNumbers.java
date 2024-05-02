@@ -8,17 +8,11 @@ import java.util.Optional;
 public class SumNumbers {
     private List<Integer> intList;
 
-    public SumNumbers(){
-        intList = new ArrayList<>();
-    }
+    public SumNumbers(){ intList = new ArrayList<>(); }
 
-    public void addNumber(Integer number){
-        intList.add(number);
-    }
+    public void addNumber(Integer number){ intList.add(number); }
 
-    public Integer calculateSum(){
-        return intList.stream().mapToInt(x->x).sum();
-    }
+    public Integer calculateSum(){ return intList.stream().mapToInt(x->x).sum(); }
 
     public Integer findBiggestNumber(){
         Optional<Integer> number= intList.stream().max(Integer::compareTo);
@@ -36,7 +30,5 @@ public class SumNumbers {
             throw new NoSuchElementException();
     }
 
-    public List<Integer> getIntList() {
-        return intList;
-    }
+    public List<Integer> getIntList() { return intList; }
 }

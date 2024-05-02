@@ -1,6 +1,4 @@
-package carrinho.compras;
-
-import java.util.Objects;
+package shopping.cart;
 
 public class Item  {
     private String name;

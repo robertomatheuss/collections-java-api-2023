@@ -1,13 +1,13 @@
-package carrinho.compras;
+package shopping.cart;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class CarrinhoDeCompras {
+public class ShoppingCart {
 
     private List<Item> itemList;
 
-    public CarrinhoDeCompras(){
+    public ShoppingCart(){
         itemList = new LinkedList<>();
     }
 
@@ -15,14 +15,15 @@ public class CarrinhoDeCompras {
         itemList.add(new Item(name,price,amount));
     }
 
-    public void removerItem(String name){
+    public void removeItem(String name){
         itemList.removeIf(x->x.getName().equals(name));
     }
 
     public Double calculateTotalValue(){
         return itemList.stream().mapToDouble(x->(x.getPrice()*x.getAmount())).sum();
     }
-    public void exibirItens(){
+
+    public void showItens(){
         itemList.forEach(System.out::println);
     }
 }
